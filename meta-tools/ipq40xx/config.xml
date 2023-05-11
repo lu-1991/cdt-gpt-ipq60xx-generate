@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<config>
+	<data type="ARCH">
+		<SOC>ipq40xx</SOC>
+	</data>
+
+	<data type="NOR_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NAND_PARAMETER">
+		<page_size>2048</page_size>
+		<pages_per_block>64</pages_per_block>
+		<total_block>4096</total_block>
+	</data>
+
+	<data type="EMMC_PARAMETER">
+		<total_block>7634944</total_block>
+		<partition_mbn>gpt_main0.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup0.bin</partition_mbn_backup>
+	</data>
+
+	<data type="NORPLUSNAND_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NORPLUSEMMC_PARAMETER">
+		<page_size>256</page_size>
+		<page_size_flash>512</page_size_flash>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+		<partition_mbn>gpt_main1.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup1.bin</partition_mbn_backup>
+	</data>
+
+	<data type="MACH_ID_BOARD_MAP">
+		<entry>
+			<machid>0x8010000</machid>
+			<board>AP-DK01.1-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010100</machid>
+			<board>AP-DK01.1-C2</board>
+			<spi_nand>true</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010001</machid>
+			<board>AP-DK04.1-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010101
+			</machid><board>AP-DK04.1-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010201</machid>
+			<board>AP-DK04.1-C3</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010301
+			</machid><board>AP-DK04.1-C4</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010007</machid>
+			<board>AP-DK05.1-C1</board>
+			<spi_nand>true</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010005</machid>
+			<board>AP-DK06.1-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x8010006</machid>
+			<board>AP-DK07.1-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x1010002</machid>
+			<board>DB.DK01.1-C1</board>
+			<spi_nand>true</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+		<entry>
+			<machid>0x1010003</machid>
+			<board>DB.DK02.1-C1</board>
+			<spi_nand>true</spi_nand>
+			<memory>128M16</memory>
+		</entry>
+	</data>
+
+	<data type="COPY_IMAGES">
+		<image type="BOOT">
+			<entry><image_path>/boot_images/build/ms/bin/40xx/nor/sbl1_nor.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/40xx/nand/sbl1_nand.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/40xx/emmc/sbl1_emmc.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/40xx/misc/tools/bootconfig_tool</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/40xx/misc/tools/partition_tool</image_path></entry>
+		</image>
+		<image type="TZ">
+			<entry><image_path>/trustzone_images/build/ms/bin/MAZAANAA/tz.mbn</image_path></entry>
+		</image>
+		<image type="NHSS">
+			<entry><image_path>/apss_proc/out/ipq40xx/openwrt-ipq40xx-u-boot-stripped.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq40xx/openwrt-ipq-ipq40xx-squashfs-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq40xx/openwrt-ipq-ipq40xx-qcom-ipq40xx-ap.dkxx-fit-uImage.itb</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq40xx/openwrt-ipq-ipq40xx-ubi-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/pack.py</image_path></entry>
+		</image>
+	</data>
+</config>

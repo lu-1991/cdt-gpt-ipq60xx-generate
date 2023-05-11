@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017-2019 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<config>
+	<data type="ARCH">
+		<SOC>ipq5018</SOC>
+	</data>
+
+	<data type="NOR_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NAND_PARAMETER">
+		<entry type="2k">
+			<page_size>2048</page_size>
+			<pages_per_block>64</pages_per_block>
+			<total_block>4096</total_block>
+		</entry>
+		<entry type="4k">
+			<page_size>4096</page_size>
+			<pages_per_block>64</pages_per_block>
+			<total_block>4096</total_block>
+		</entry>
+	</data>
+
+	<data type="EMMC_PARAMETER">
+		<total_block>15269888</total_block>
+		<partition_mbn>gpt_main0.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup0.bin</partition_mbn_backup>
+	</data>
+
+	<data type="NORPLUSNAND_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NORPLUSEMMC_PARAMETER">
+		<page_size>256</page_size>
+		<page_size_flash>512</page_size_flash>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+		<partition_mbn>gpt_main1.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup1.bin</partition_mbn_backup>
+	</data>
+
+	<data type="MACH_ID_BOARD_MAP">
+		<entry>
+			<machid>0xF040000</machid>
+			<board>MP-EMU</board>
+			<spi_nand>false</spi_nand>
+			<memory>256M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+		</entry>
+		<entry>
+			<machid>0x8040000</machid>
+			<board>AP-MP02.1</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16_DDR3</memory>
+			<tiny_image>true</tiny_image>
+			<spruce_on_pcie_x2>true</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>1</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040001</machid>
+			<board>AP-MP03.1</board>
+			<spi_nand>false</spi_nand>
+			<memory>256M16_DDR3</memory>
+			<tiny_image>true</tiny_image>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040101</machid>
+			<board>AP-MP03.1-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>256M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040201</machid>
+			<board>AP-MP03.1-C3</board>
+			<spi_nand>false</spi_nand>
+			<memory>256M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040002</machid>
+			<board>AP-MP03.3</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>3</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040102</machid>
+			<board>AP-MP03.3-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>3</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040202</machid>
+			<board>AP-MP03.3-C3</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>3</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040005</machid>
+			<board>AP-MP03.4-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040105</machid>
+			<board>AP-MP03.4-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040004</machid>
+			<board>AP-MP03.5-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>true</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>1</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040104</machid>
+			<board>AP-MP03.5-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>true</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>1</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040003</machid>
+			<board>AP-MP03.6-C1</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x8040103</machid>
+			<board>AP-MP03.6-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x1040003</machid>
+			<board>DB-MP02.1</board>
+			<spi_nand>false</spi_nand>
+			<memory>128M16_DDR3</memory>
+			<tiny_image>true</tiny_image>
+			<spruce_on_pcie_x2>true</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>1</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x1040004</machid>
+			<board>DB-MP03.1</board>
+			<spi_nand>false</spi_nand>
+			<memory>256M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x1040104</machid>
+			<board>DB-MP03.1-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>256M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>false</spruce_on_pcie_x1>
+			<wififw_type>2</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x1040005</machid>
+			<board>DB-MP03.3</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>3</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x1040105</machid>
+			<board>DB-MP03.3-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>3</wififw_type>
+		</entry>
+		<entry>
+			<machid>0x1040006</machid>
+			<board>TB-MP04</board>
+			<spi_nand>false</spi_nand>
+			<memory>2M512M8_DDR3</memory>
+			<spruce_on_pcie_x2>false</spruce_on_pcie_x2>
+			<spruce_on_pcie_x1>true</spruce_on_pcie_x1>
+			<wififw_type>3</wififw_type>
+		</entry>
+	</data>
+
+	<data type="COPY_IMAGES">
+		<image type="BOOT">
+			<entry><image_path>/boot_images/core/boot/secboot3/hw/ipq5018/sbl1/SBL1_tiny_nor.elf</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/5018/nor/sbl1_nor.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/5018/nand/sbl1_nand.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/5018/emmc/sbl1_emmc.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/5018/flashless/sbl1_flashless.mbn</image_path></entry>
+			<entry><image_path>/boot_images/core/bsp/tools/flash/partition_tool_exe/build/partition_tool</image_path></entry>
+			<entry><image_path>/boot_images/core/bsp/tools/flash/bootconfig_exe/build/bootconfig_tool</image_path></entry>
+		</image>
+		<image type="TZ">
+			<entry><image_path>/trustzone_images/build/ms/bin/SAOAANAY/tz.mbn</image_path></entry>
+			<entry><image_path>/trustzone_images/build/ms/bin/SAOAANAY/devcfg.mbn</image_path></entry>
+			<entry><image_path>/trustzone_images/core/bsp/monitor/build/SAOAANAY/tiny_mon.elf</image_path></entry>
+			<entry><image_path>/trustzone_images/core/bsp/qsee/build/SAOAANAY/tiny_qsee.elf</image_path></entry>
+			<entry><image_path>/trustzone_images/core/bsp/devcfg/build/SAOAANAY/devcfg.elf</image_path></entry>
+		</image>
+		<image type="NHSS32">
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq5018_tiny-u-boot.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq5018-u-boot.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq-ipq50xx-squashfs-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq-ipq50xx-qcom-ipq50xx-mpxx-fit-uImage.itb</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq-ipq50xx-ubi-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/pack.py</image_path></entry>
+		</image>
+		<image type="NHSS64">
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq5018_tiny-u-boot.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx/openwrt-ipq5018-u-boot.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx_64/openwrt-ipq-ipq50xx_64-squashfs-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx_64/openwrt-ipq-ipq50xx_64-qcom-ipq50xx-mpxx-fit-uImage.itb</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq50xx_64/openwrt-ipq-ipq50xx_64-ubi-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/pack.py</image_path></entry>
+		</image>
+		<image type="WIFIFW">
+			<entry><image_path>/wlan_proc/build/ms/bin/5018.wlanfw.eval/FW_IMAGES/wifi_fw_ipq5018_squashfs.img</image_path></entry>
+			<entry><image_path>/wlan_proc/build/ms/bin/5018.wlanfw.eval/FW_IMAGES/wifi_fw_ipq5018_qcn9000_squashfs.img</image_path></entry>
+			<entry><image_path>/wlan_proc/build/ms/bin/5018.wlanfw2.map_spruce_eval/FW_IMAGES/wifi_fw_ipq5018_qcn9000_qcn6122_squashfs.img</image_path></entry>
+			<entry><image_path>/wlan_proc/build/ms/bin/5018.wlanfw2.map_spr_spr_eval_cs/FW_IMAGES/wifi_fw_ipq5018_qcn6122cs_squashfs.img</image_path></entry>
+		</image>
+		<image type="BTFW">
+			<entry><image_path>/btfw_proc/maple/bsp/patch/build/SCAMBAF/FW_IMAGES/bt_fw_patch_squashfs.img</image_path></entry>
+			<entry><image_path>/btfw_proc/maple/bsp/patch/build/SCAMBAF/FW_IMAGES/bt_fw_patch_ubi.img</image_path></entry>
+		</image>
+	</data>
+</config>

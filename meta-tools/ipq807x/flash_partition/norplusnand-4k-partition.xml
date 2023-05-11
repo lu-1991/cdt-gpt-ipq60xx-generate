@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017, 2019 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<norplusnandboot>
+	<magic_numbers>
+		<usr_part_magic1>0xAA7D1B9A</usr_part_magic1>
+		<usr_part_magic2>0x1F7D48BC</usr_part_magic2>
+	</magic_numbers>
+	<partition_version length="4">0x4</partition_version>
+	<partitions>
+<!-- NOR Partition Informations -->
+		<partition>
+			<name length="16" type="string">0:SBL1</name>
+			<size_kb length="4">320</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">sbl1_nor.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:MIBIB</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>64</attr>
+			<attr>16</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">norplusnand-system-partition-ipq807x-m4096-p256KiB.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:BOOTCONFIG</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>64</attr>
+			<attr>16</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">bootconfig.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:BOOTCONFIG1</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>64</attr>
+			<attr>16</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">bootconfig.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:QSEE</name>
+			<size_kb length="4">1536</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">tz.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:QSEE_1</name>
+			<size_kb length="4">1536</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:DEVCFG</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">devcfg.mbn</img_name>
+			<img_name type="string" memory="256">devcfg_lm.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:DEVCFG_1</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APDP</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APDP_1</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:RPM</name>
+			<size_kb length="4">256</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">rpm.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:RPM_1</name>
+			<size_kb length="4">256</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:CDT</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">cdt.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:CDT_1</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBLENV</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBL</name>
+			<size_kb length="4">640</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">openwrt-ipq807x-u-boot.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBL_1</name>
+			<size_kb length="4">640</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:ART</name>
+			<size_kb length="4">256</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:ETHPHYFW</name>
+			<size_kb length="4">256</size_kb>
+			<pad_kb length="2">256</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+
+<!-- NAND Partition Informations -->
+		<partition>
+			<name length="16" type="string">rootfs</name>
+			<size_kb length="4">60416</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">1</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name mode="32" type="string" image_type="hlos">openwrt-ipq-ipq807x-ubi-root-m4096-p256KiB.img</img_name>
+			<img_name mode="64" type="string" image_type="hlos">openwrt-ipq-ipq807x_64-ubi-root-m4096-p256KiB.img</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:WIFIFW</name>
+			<size_kb length="4">24064</size_kb>
+			<pad_kb length="2">1024</pad_kb>
+			<which_flash length="2">1</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string" soc_version="1" optional="true" image_type="hlos">wifi_fw_ubi_m4096_p256.img</img_name>
+			<img_name type="string" soc_version="2" optional="true" image_type="hlos">wifi_fw_ubi_m4096_p256_v2.img</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">rootfs_1</name>
+			<size_kb length="4">60416</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">1</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:WIFIFW_1</name>
+			<size_kb length="4">24064</size_kb>
+			<pad_kb length="2">1024</pad_kb>
+			<which_flash length="2">1</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+	</partitions>
+</norplusnandboot>

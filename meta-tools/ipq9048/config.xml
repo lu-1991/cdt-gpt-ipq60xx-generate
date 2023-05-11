@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017, 2019, 2021 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<config>
+	<data type="ARCH">
+		<SOC>ipq9048</SOC>
+	</data>
+
+	<data type="NOR_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NAND_PARAMETER">
+		<entry type="2k">
+			<page_size>2048</page_size>
+			<pages_per_block>64</pages_per_block>
+			<total_block>4096</total_block>
+		</entry>
+		<entry type="4k">
+			<page_size>4096</page_size>
+			<pages_per_block>64</pages_per_block>
+			<total_block>4096</total_block>
+		</entry>
+	</data>
+
+	<data type="EMMC_PARAMETER">
+		<total_block>7634944</total_block>
+		<partition_mbn>gpt_main0.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup0.bin</partition_mbn_backup>
+	</data>
+
+	<data type="NORPLUSNAND_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NORPLUSEMMC_PARAMETER">
+		<page_size>256</page_size>
+		<page_size_flash>512</page_size_flash>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+		<partition_mbn>gpt_main1.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup1.bin</partition_mbn_backup>
+	</data>
+
+	<data type="MACH_ID_BOARD_MAP">
+		<entry>
+			<machid>0xF050000</machid>
+			<board>AL-EMU</board>
+			<spi_nand>false</spi_nand>
+			<memory>512M16_DDR4</memory>
+		</entry>
+	</data>
+
+	<data type="COPY_IMAGES">
+		<image type="BOOT">
+			<entry><image_path>/boot_images/QcomPkg/IPQ9018Pkg/Bin/9018/LA/DEBUG/sign/default/sbl1/xbl.elf</image_path></entry>
+			<entry><image_path>/boot_images/QcomPkg/IPQ9018Pkg/Bin/9018/LA/DEBUG/sign/default/sbl1/xbl_nand.elf</image_path></entry>
+			<entry><image_path>/boot_images/Build/IPQ9018_Loader/DEBUG_CLANG40LINUX/ARM/QcomPkg/XBLLoader/XBLLoader/DEBUG/XBLLoader.dll</image_path></entry>
+			<entry><image_path>/boot_images/core/bsp/tools/flash/partition_tool_exe/build/partition_tool</image_path></entry>
+			<entry><image_path>/boot_images/core/bsp/tools/flash/bootconfig_exe/build/bootconfig_tool</image_path></entry>
+		</image>
+		<image type="TZ">
+			<entry><image_path>/trustzone_images/build/ms/bin/OAPAANAA/tz.mbn</image_path></entry>
+			<entry><image_path>/trustzone_images/build/ms/bin/OAPAANAA/devcfg_noac.mbn</image_path></entry>
+			<entry><image_path>/trustzone_images/build/ms/bin/OAPAANAA/devcfg_nosmmu.mbn</image_path></entry>
+		</image>
+		<image type="NHSS32">
+			<entry><image_path>/apss_proc/out/ipq9048/openwrt-ipq9048-u-boot.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq9048/openwrt-ipq-ipq9048-squashfs-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq9048/openwrt-ipq-ipq9048-qcom-ipq9048-alxx-fit-uImage.itb</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq9048/openwrt-ipq-ipq9048-ubi-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/pack.py</image_path></entry>
+		</image>
+		<image type="NHSS64">
+			<entry><image_path>/apss_proc/out/ipq9048/openwrt-ipq9048-u-boot.elf</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq9048_64/openwrt-ipq-ipq9048_64-squashfs-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq9048_64/openwrt-ipq-ipq9048_64-qcom-ipq9048-alxx-fit-uImage.itb</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq9048_64/openwrt-ipq-ipq9048_64-ubi-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/pack.py</image_path></entry>
+		</image>
+		<image type="RPM">
+			<entry><image_path>/rpm_proc/build/ms/bin/9048/rpm.mbn</image_path></entry>
+		</image>
+		<image type="WIFIFW">
+			<entry><image_path>/wlan_proc/build/ms/bin/wifi_fw_squashfs.img</image_path></entry>
+			<entry><image_path>/wlan_proc/build/ms/bin/wifi_fw_ubi.img</image_path></entry>
+		</image>
+	</data>
+</config>

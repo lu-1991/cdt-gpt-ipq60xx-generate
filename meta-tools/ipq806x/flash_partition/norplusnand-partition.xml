@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<norplusnandboot>
+	<magic_numbers>
+		<usr_part_magic1>0xAA7D1B9A</usr_part_magic1>
+		<usr_part_magic2>0x1F7D48BC</usr_part_magic2>
+	</magic_numbers>
+	<partition_version length="4">0x3</partition_version>
+	<partitions>
+		<partition>
+			<name length="16" type="string">0:SBL1</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">nor_sbl1.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:MIBIB</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">norplusnand-system-partition-ipq806x.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:SBL2</name>
+			<size_kb length="4">192</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">nor_sbl2.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:SBL3</name>
+			<size_kb length="4">192</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">nor_sbl3.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:DDRCONFIG</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">cdt.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:SSD</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">ssd.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:TZ</name>
+			<size_kb length="4">192</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">tz.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:RPM</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">rpm.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBL</name>
+			<size_kb length="4">448</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">openwrt-ipq806x-u-boot.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBLENV</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:ART</name>
+			<size_kb length="4">256</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:BOOTCONFIG</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">bootconfig.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:SBL2_1</name>
+			<size_kb length="4">192</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:SBL3_1</name>
+			<size_kb length="4">192</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:DDRCONFIG_1</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:TZ_1</name>
+			<size_kb length="4">192</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:RPM_1</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBL_1</name>
+			<size_kb length="4">448</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:BOOTCONFIG1</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">bootconfig.bin</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">rootfs</name>
+			<size_kb length="4">65536</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">1</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">openwrt-ipq-ipq806x-ubi-root.img</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">rootfs_1</name>
+			<size_kb length="4">65536</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">1</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+	</partitions>
+</norplusnandboot>

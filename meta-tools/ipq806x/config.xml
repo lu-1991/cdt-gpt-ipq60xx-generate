@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<config>
+	<data type="ARCH">
+		<SOC>ipq806x</SOC>
+	</data>
+
+	<data type="NOR_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>512</total_block>
+	</data>
+
+	<data type="NAND_PARAMETER">
+		<page_size>2048</page_size>
+		<pages_per_block>64</pages_per_block>
+		<total_block>4096</total_block>
+	</data>
+
+	<data type="EMMC_PARAMETER">
+		<total_block>7634944</total_block>
+		<partition_mbn>gpt_main0.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup0.bin</partition_mbn_backup>
+	</data>
+
+	<data type="NORPLUSNAND_PARAMETER">
+		<page_size>256</page_size>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+	</data>
+
+	<data type="NORPLUSEMMC_PARAMETER">
+		<page_size>256</page_size>
+		<page_size_flash>512</page_size_flash>
+		<pages_per_block>256</pages_per_block>
+		<total_block>256</total_block>
+		<partition_mbn>gpt_main1.bin</partition_mbn>
+		<partition_mbn_backup>gpt_backup1.bin</partition_mbn_backup>
+	</data>
+
+	<data type="MACH_ID_BOARD_MAP">
+		<entry>
+			<machid>0x125B</machid>
+			<board>DB149-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x125F</machid>
+			<board>DB147-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+
+		<entry>
+			<machid>0x12CA</machid>
+			<board>AP145-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x1260</machid>
+			<board>AP148-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x12CB</machid>
+			<board>DB149_1XX-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+
+		<entry>
+			<machid>0x12CC</machid>
+			<board>AP145_1XX-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x1331</machid>
+			<board>AP148_1XX-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x1335</machid>
+			<board>DB149_2XX-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x136b</machid>
+			<board>AP160-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x137f</machid>
+			<board>AP160_2XX-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x136c</machid>
+			<board>AP161-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+		<entry>
+			<machid>0x139c</machid>
+			<board>AK01_1XX-cdt</board>
+			<spi_nand>false</spi_nand>
+		</entry>
+	</data>
+
+	<data type="COPY_IMAGES">
+		<image type="BOOT">
+			<entry><image_path>/boot_images/build/ms/bin/AAABANAZ/nor_sbl1.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAABANAZ/nor_sbl2.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAABANAZ/nor_sbl3.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAAAANAZ/nand_sbl1.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAAAANAZ/nand_sbl2.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAAAANAZ/nand_sbl3.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAACANAZ/sdcc_sbl1.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAACANAZ/sdcc_sbl2.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAACANAZ/sdcc_sbl3.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAAAANAA/AP148/ssd.mbn</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAAAANAA/tools/bootconfig_tool</image_path></entry>
+			<entry><image_path>/boot_images/build/ms/bin/AAAAANAA/tools/nor_tool</image_path></entry>
+		</image>
+		<image type="TZ">
+			<entry><image_path>/trustzone_images/build/ms/bin/AAAAANAZ/tz.mbn</image_path></entry>
+		</image>
+		<image type="RPM">
+			<entry><image_path>/rpm_proc/build/ms/bin/AAAAANAAR/rpm.mbn</image_path></entry>
+		</image>
+		<image type="NHSS">
+			<entry><image_path>/apss_proc/out/ipq806x/openwrt-ipq806x-u-boot.mbn</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq806x/openwrt-ipq-ipq806x-squashfs-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq806x/openwrt-ipq-ipq806x-qcom-ipq806x-akxx-fit-uImage.itb</image_path></entry>
+			<entry><image_path>/apss_proc/out/ipq806x/openwrt-ipq-ipq806x-ubi-root.img</image_path></entry>
+			<entry><image_path>/apss_proc/out/pack.py</image_path></entry>
+		</image>
+	</data>
+</config>

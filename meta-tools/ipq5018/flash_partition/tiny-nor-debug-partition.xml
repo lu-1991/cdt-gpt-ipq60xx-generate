@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017-2018, 2020 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<norboot>
+	<magic_numbers>
+		<usr_part_magic1>0xAA7D1B9A</usr_part_magic1>
+		<usr_part_magic2>0x1F7D48BC</usr_part_magic2>
+	</magic_numbers>
+	<partition_version length="4">0x4</partition_version>
+	<partitions>
+		<partition>
+			<name length="16" type="string">0:BOOTLDR1</name>
+			<size_kb length="4">128</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">bootldr1_nor.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:BOOTLDR2</name>
+			<size_kb length="4">384</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>64</attr>
+			<attr>16</attr>
+			<attr>0xFF</attr>
+			<img_name type="string">bootldr2_nor.mbn</img_name>
+			<img_name type="string" atf='yes'>bootldr2_atf_nor.mbn</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBLENV</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:ART</name>
+			<size_kb length="4">64</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:HLOS</name>
+			<size_kb length="4">2624</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name image_type="hlos" mode="32" type="string">openwrt-ipq-ipq50xx-qcom-ipq50xx-mpxx-fit-uImage.itb</img_name>
+			<img_name image_type="hlos" mode="64" type="string">openwrt-ipq-ipq50xx_64-qcom-ipq50xx-mpxx-fit-uImage.itb</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">rootfs</name>
+			<size_kb length="4">8832</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name image_type="hlos" mode="32" type="string">openwrt-ipq-ipq50xx-squashfs-root.img</img_name>
+			<img_name image_type="hlos" mode="64" type="string">openwrt-ipq-ipq50xx_64-squashfs-root.img</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:WIFIFW</name>
+			<size_kb length="4">3712</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name image_type="hlos" type="string" wififw_type="1" optional="true">wifi_fw_ipq5018_squashfs.img</img_name>
+			<img_name image_type="hlos" type="string" wififw_type="1" optional="true">wifi_fw_ipq5018_qcn6122cs_squashfs.img</img_name>
+			<img_name image_type="hlos" type="string" wififw_type="2">wifi_fw_ipq5018_qcn9000_squashfs.img</img_name>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:BTFW</name>
+			<size_kb length="4">256</size_kb>
+			<pad_kb length="2">0</pad_kb>
+			<which_flash length="2">0</which_flash>
+			<attr>0xFF</attr>
+			<attr>0xFF</attr>
+			<attr>0x00</attr>
+			<attr>0xFF</attr>
+			<img_name image_type="hlos" type="string">bt_fw_patch_squashfs.img</img_name>
+		</partition>
+	</partitions>
+</norboot>

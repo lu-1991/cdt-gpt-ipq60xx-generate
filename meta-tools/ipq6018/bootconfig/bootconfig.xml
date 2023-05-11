@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===========================================================================
+Copyright (c) 2017, 2019 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+<bootconfig>
+	<magic_numbers>
+		<usr_part_magic1>0xA3A2A1A0</usr_part_magic1>
+	</magic_numbers>
+	<age length="4">0x1</age>
+	<partitions>
+		<partition>
+			<name length="16" type="string">0:QSEE</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:DEVCFG</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:RPM</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:CDT</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:APPSBL</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:HLOS</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">rootfs</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+		<partition>
+			<name length="16" type="string">0:WIFIFW</name>
+			<primary_boot length="4">0</primary_boot>
+		</partition>
+	</partitions>
+</bootconfig>
+
+

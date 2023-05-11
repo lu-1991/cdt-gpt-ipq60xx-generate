@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<!--
+===========================================================================
+Copyright (c) 2017 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+===========================================================================
+-->
+
+<configuration>
+	<parser_instructions>
+		<!-- NOTE: entries here are used by the parser when generating output -->
+		<!-- NOTE: each filename must be on it's own line as in variable=value-->
+		WRITE_PROTECT_BOUNDARY_IN_KB    = 65536
+		GROW_LAST_PARTITION_TO_FILL_DISK= false
+	</parser_instructions>
+
+<!-- NOTE: "physical_partition" are listed in order and apply to devices such as eMMC cards that have (for example) 3 physical partitions -->
+<!-- This is physical partition 0 -->
+	<physical_partition ref="emmc">
+	<!-- NOTE: Define information for each partition, which will be created in order listed here -->
+	<!-- NOTE: Place all "readonly=true" partitions side by side for optimum space usage -->
+	<!-- NOTE: If OPTIMIZE_READONLY_PARTITIONS=true, then partitions won't be in the order listed here -->
+	<!--       they will instead be placed side by side at the beginning of the disk -->
+        <partition
+		label="0:SBL1"
+		size_in_kb="100"
+		type="DEA0BA2C-CBDD-4805-B4F9-F428251C3E98"
+		bootable="false"
+		readonly="false"
+		filename="sdcc_sbl1.mbn"
+		/>
+        <partition
+		label="0:SBL2"
+		size_in_kb="200"
+		type="8C6B52AD-8A9E-4398-AD09-AE916E53AE2D"
+		bootable="false"
+		readonly="false"
+		filename="sdcc_sbl2.mbn"
+		/>
+        <partition
+		label="0:SBL3"
+		size_in_kb="400"
+		type="05E044DF-92F1-4325-B69E-374A82E97D6E"
+		bootable="false"
+		readonly="false"
+		filename="sdcc_sbl3.mbn"
+		/>
+        <partition
+		label="0:RPM"
+		size_in_kb="200"
+		type="098DF793-D712-413D-9D4E-89D711772228"
+		bootable="false"
+		readonly="false"
+		filename="rpm.mbn"
+		/>
+        <partition
+		label="0:TZ"
+		size_in_kb="300"
+		type="A053AA7F-40B8-4B1C-BA08-2F68AC71A4F4"
+		bootable="false"
+		readonly="false"
+		filename="tz.mbn"
+		/>
+        <partition
+		label="0:DDRCONFIG"
+		size_in_kb="2"
+		type="A19F205F-CCD8-4B6D-8F1E-2D9BC24CFFB1"
+		bootable="false"
+		readonly="false"
+		filename="cdt.bin"
+		/>
+        <partition
+		label="0:SSD"
+		size_in_kb="8"
+		type="2C86E742-745E-4FDD-BFD8-B6A7AC638772"
+		bootable="false"
+		readonly="false"
+		filename="ssd.mbn"
+		/>
+        <partition
+		label="0:APPSBL"
+		size_in_kb="512"
+		type="400FFDCD-22E0-47E7-9A23-F16ED9382388"
+		bootable="false"
+		readonly="false"
+		filename="openwrt-ipq806x-u-boot.mbn"
+		/>
+        <partition
+		label="0:APPSBLENV"
+		size_in_kb="2"
+		type="300FFDCD-22E0-47E7-9A23-F16ED9382387"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:ART"
+		size_in_kb="256"
+		type="E218DD54-2B46-4C80-B30A-2C2E2613827F"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:HLOS"
+		size_in_kb="4096"
+		type="B51F2982-3EBE-46DE-8721-EE641E1F9997"
+		bootable="false"
+		readonly="false"
+		filename="openwrt-ipq-ipq806x-qcom-ipq806x-akxx-fit-uImage.itb"
+		/>
+        <partition
+		label="rootfs"
+		size_in_kb="131072"
+		type="A51F2982-3EBE-46DE-8721-EE641E1F9996"
+		bootable="false"
+		readonly="false"
+		filename="openwrt-ipq-ipq806x-squashfs-root.img"
+		/>
+        <partition
+		label="rootfs_data"
+		size_in_kb="1310720"
+		type="AB1760DA-A8BB-4D6F-98D2-9AD3AB9009CD"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:BOOTCONFIG"
+		size_in_kb="256"
+		type="2B7D04FF-31F0-4E6A-BE9A-DA50314DAD58"
+		bootable="false"
+		readonly="false"
+		filename="bootconfig.bin"
+		/>
+        <partition
+		label="0:SBL2_1"
+		size_in_kb="200"
+		type="09D83D4C-890B-11E5-995C-40A8F05F1418"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:SBL3_1"
+		size_in_kb="400"
+		type="139A9AF0-890B-11E5-82A0-40A8F05F1418"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:RPM_1"
+		size_in_kb="200"
+		type="2D2BE762-890B-11E5-AAF3-40A8F05F1418"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:TZ_1"
+		size_in_kb="300"
+		type="274BFC7E-890B-11E5-A40B-40A8F05F1418"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:DDRCONFIG_1"
+		size_in_kb="2"
+		type="1ACA2F16-890B-11E5-B993-40A8F05F1418"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:BOOTCONFIG1"
+		size_in_kb="256"
+		type="7BD25378-5C39-11E5-8A77-40A8F05F1418"
+		bootable="false"
+		readonly="false"
+		filename="bootconfig.bin"
+		/>
+        <partition
+		label="0:APPSBL_1"
+		size_in_kb="512"
+		type="C126787D-3EEF-444C-9E43-FEFF3F103E22"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="0:HLOS_1"
+		size_in_kb="4096"
+		type="A71DA577-7F81-4626-B4A2-E377F9174525"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+        <partition
+		label="rootfs_1"
+		size_in_kb="131072"
+		type="AC8377D3-9D77-4B6B-B270-67F168753057"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+ 	</physical_partition>
+
+<!-- This is physical partition 1 -->
+ 	<physical_partition ref="norplusemmc">
+	<!-- NOTE: Define information for each partition, which will be created in order listed here -->
+	<!-- NOTE: Place all "readonly=true" partitions side by side for optimum space usage -->
+	<!-- NOTE: If OPTIMIZE_READONLY_PARTITIONS=true, then partitions won't be in the order listed here -->
+	<!--       they will instead be placed side by side at the beginning of the disk -->
+        <partition
+		label="0:HLOS"
+		size_in_kb="4096"
+		type="B51F2982-3EBE-46DE-8721-EE641E1F9997"
+		bootable="false"
+		readonly="false"
+		filename="openwrt-ipq-ipq806x-qcom-ipq806x-akxx-fit-uImage.itb"
+		/>
+        <partition
+		label="rootfs"
+		size_in_kb="131072"
+		type="A51F2982-3EBE-46DE-8721-EE641E1F9996"
+		bootable="false"
+		readonly="false"
+		filename="openwrt-ipq-ipq806x-squashfs-root.img"
+		/>
+        <partition
+		label="rootfs_data"
+		size_in_kb="1310720"
+		type="AB1760DA-A8BB-4D6F-98D2-9AD3AB9009CD"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+  	</physical_partition>
+
+</configuration>
+
