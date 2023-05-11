@@ -102,6 +102,12 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
 			<memory>256M16_DDR3</memory>
 		</entry>
 		<entry>
+			<machid>0x8030201</machid>
+			<board>AP-CP03-C2</board>
+			<spi_nand>false</spi_nand>
+			<memory>Arthur_512M16(1G)_DDR3</memory>
+		</entry>
+		<entry>
 			<machid>0x1030000</machid>
 			<board>DB-CP01</board>
 			<spi_nand>false</spi_nand>
