@@ -1,6 +1,7 @@
 You will also like to see https://github.com/lgs2007m/uboot-ipq60xx-build
 
 CDT is Qualcomm Configuration Data Table.
+
 GPT is GUID Partition Table.
 
 # CDT and GPT generate
