@@ -460,7 +460,7 @@ def CreateGPTPartitionTable(PhysicalPartitionNumber):
         print "  (_,-\"   (_,-\"   (_,-\"   (_,-\"   (_,-\"   (_,-\"   (_,-\"   (_,-\"   (_,-\""
         print "="*78
 	
-        PhyPartition[k][j]['size_in_kb'] = int(PhyPartition[k][j]['size_in_kb'])
+        PhyPartition[k][j]['size_in_kb'] = float(PhyPartition[k][j]['size_in_kb'])
         print "\n\n%d of %d \"%s\" (readonly=%s) and size=%dKB (%dMB) (%i sectors with %i bytes/sector)" %(j+1,len(PhyPartition[k]),PhyPartition[k][j]['label'],PhyPartition[k][j]['readonly'],PhyPartition[k][j]['size_in_kb'],PhyPartition[k][j]['size_in_kb']/1024,ConvertKBtoSectors(PhyPartition[k][j]['size_in_kb']),SECTOR_SIZE_IN_BYTES)
 
 	##import pdb; pdb.set_trace()	# timmy
@@ -1063,11 +1063,11 @@ def ParseXML(XMLFile):
                     elif name=="size":
                         if len(value)==0:
                             PrintBigError("\nERROR: Invalid partition size")
-                        Partition["size_in_kb"]=int(value)/2        # force as even number
+                        Partition["size_in_kb"]=float(value)/2        # force as even number
                     elif name=="size_in_kb":
                         if len(value)==0:
                             PrintBigError("\nERROR: Invalid partition size")
-                        Partition["size_in_kb"]=int(value)
+                        Partition["size_in_kb"]=float(value)
                     else:
                         Partition[name]=value
                 

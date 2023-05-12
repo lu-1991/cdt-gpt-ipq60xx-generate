@@ -199,7 +199,7 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
 		/>
 	<partition
 		label="rootfs_data"
-		size_in_kb="131072"
+		size_in_kb="20480"
 		type="AB1760DA-A8BB-4D6F-98D2-9AD3AB9009CD"
 		bootable="false"
 		readonly="false"
@@ -209,6 +209,40 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
 		label="0:ETHPHYFW"
 		size_in_kb="512"
 		type="C1DC4CAB-430B-4CDC-A8C5-7115912B74FE"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+	<partition
+		label="plugin"
+		size_in_kb="89600"
+		type="5627B780-DC4A-415D-9913-CF54AC40FA52"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+	<partition
+		label="log"
+		size_in_kb="307200"
+		type="1B1760DA-A82B-4B6F-92D2-0A93AC9601CA"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+	<partition
+		label="swap"
+		size_in_kb="524288"
+		type="3B19202A-A8DB-4B6F-92D2-0A03AB9609C3"
+		bootable="false"
+		readonly="false"
+		filename=""
+		/>
+		<!-- 注意下面storage分区原厂是58798046.5kb 多了0.5kb  -->
+		<!-- 通过修改ptool.py中的size_in_kb为float才可以用小数  -->
+	<partition
+		label="storage"
+		size_in_kb="58798046.5"
+		type="1B1720DA-A8BB-4B6F-92D2-0A93AB9609CA"
 		bootable="false"
 		readonly="false"
 		filename=""
