@@ -12,11 +12,11 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
 			<device id="cdt_header">
 				<props name="magic-number" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0x43, 0x44, 0x54, 0x00, end</props>
 				<props name="version" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0x02, 0x00, end</props>
-				<props name="reserved1" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0xD1, 0x55, 0x67, 0x7E, end</props>
 				<!--
 					reserved1存储的应该是CRC，不是手动设置的，QSDK源码meta-tools生成CDT时会计算出来。
 					具体是cdt_generator.py中计算得到的。这里的reserved1我直接把最终计算得到的CRC32填上了
 				-->
+				<props name="reserved1" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0xD1, 0x55, 0x67, 0x7E, end</props>
 				<props name="reserved2" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0x00, 0x00, 0x00, 0x00, end</props>
 			</device>
 
