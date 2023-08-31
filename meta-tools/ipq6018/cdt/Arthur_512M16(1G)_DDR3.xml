@@ -16,7 +16,7 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
 					reserved1存储的应该是CRC，不是手动设置的，QSDK源码meta-tools生成CDT时会计算出来。
 					具体是cdt_generator.py中计算得到的。这里的reserved1我直接把最终计算得到的CRC32填上了
 				-->
-				<props name="reserved1" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0xA5, 0x5F, 0xD4, 0x6C, end</props>
+				<props name="reserved1" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0xEB, 0x11, 0x00, 0x7C, end</props>
 				<props name="reserved2" type="DALPROP_ATTR_TYPE_BYTE_SEQ">0x00, 0x00, 0x00, 0x00, end</props>
 			</device>
 
